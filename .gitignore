@@ -5,6 +5,7 @@ obj/
 # Visual Studio Code settings
 .vscode/
 
+# Visual Studio settings
 .vs/
 
 # Rider project settings
