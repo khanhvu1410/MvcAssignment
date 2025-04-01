@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MvcAssignment.Data.Models.Person>
+
+@{
+    ViewData["Title"] = "Birth Year Greater Than 2000";
+}
+
+<h1>Rookies who have birth year greater than 2000</h1>
+
+@await Html.PartialAsync("_RookiesPartial", Model)
+

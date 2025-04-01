@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\nashtech\\MvcAssignment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6E77E4-20A0-4085-9250-E3BA291D1DA0}|MvcAssignment.Web\\MvcAssignment.Web.csproj|e:\\nashtech\\mvcassignment\\mvcassignment.web\\controllers\\rookiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7C6E77E4-20A0-4085-9250-E3BA291D1DA0}|MvcAssignment.Web\\MvcAssignment.Web.csproj|solutionrelative:mvcassignment.web\\controllers\\rookiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16D59FBB-CDDB-4B42-852D-CE0CB40D0AA0}|MvcAssignment.Business\\MvcAssignment.Business.csproj|e:\\nashtech\\mvcassignment\\mvcassignment.business\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16D59FBB-CDDB-4B42-852D-CE0CB40D0AA0}|MvcAssignment.Business\\MvcAssignment.Business.csproj|solutionrelative:mvcassignment.business\\services\\personservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16D59FBB-CDDB-4B42-852D-CE0CB40D0AA0}|MvcAssignment.Business\\MvcAssignment.Business.csproj|e:\\nashtech\\mvcassignment\\mvcassignment.business\\interfaces\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16D59FBB-CDDB-4B42-852D-CE0CB40D0AA0}|MvcAssignment.Business\\MvcAssignment.Business.csproj|solutionrelative:mvcassignment.business\\interfaces\\ipersonservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C6E77E4-20A0-4085-9250-E3BA291D1DA0}|MvcAssignment.Web\\MvcAssignment.Web.csproj|e:\\nashtech\\mvcassignment\\mvcassignment.web\\views\\shared\\_rookiespartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C6E77E4-20A0-4085-9250-E3BA291D1DA0}|MvcAssignment.Web\\MvcAssignment.Web.csproj|solutionrelative:mvcassignment.web\\views\\shared\\_rookiespartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_RookiesPartial.cshtml",
+              "DocumentMoniker": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Web\\Views\\Shared\\_RookiesPartial.cshtml",
+              "RelativeDocumentMoniker": "MvcAssignment.Web\\Views\\Shared\\_RookiesPartial.cshtml",
+              "ToolTip": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Web\\Views\\Shared\\_RookiesPartial.cshtml",
+              "RelativeToolTip": "MvcAssignment.Web\\Views\\Shared\\_RookiesPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T14:49:01.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPersonService.cs",
+              "DocumentMoniker": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Business\\Interfaces\\IPersonService.cs",
+              "RelativeDocumentMoniker": "MvcAssignment.Business\\Interfaces\\IPersonService.cs",
+              "ToolTip": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Business\\Interfaces\\IPersonService.cs",
+              "RelativeToolTip": "MvcAssignment.Business\\Interfaces\\IPersonService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T11:23:29.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PersonService.cs",
+              "DocumentMoniker": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Business\\Services\\PersonService.cs",
+              "RelativeDocumentMoniker": "MvcAssignment.Business\\Services\\PersonService.cs",
+              "ToolTip": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Business\\Services\\PersonService.cs",
+              "RelativeToolTip": "MvcAssignment.Business\\Services\\PersonService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB8AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T11:23:26.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RookiesController.cs",
+              "DocumentMoniker": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Web\\Controllers\\RookiesController.cs",
+              "RelativeDocumentMoniker": "MvcAssignment.Web\\Controllers\\RookiesController.cs",
+              "ToolTip": "E:\\nashtech\\MvcAssignment\\MvcAssignment.Web\\Controllers\\RookiesController.cs",
+              "RelativeToolTip": "MvcAssignment.Web\\Controllers\\RookiesController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwC4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T09:45:04.549Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
