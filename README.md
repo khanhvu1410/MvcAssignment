@@ -1,7 +1,7 @@
-# MVC .Net Core Assignment - Khanh Vu
+# ASP.NET Core MVC Assignment - Khanh Vu
 
 ## Project Overview  
-This project is an ASP.NET Core MVC application that manages a list of NashTech Rookies. It includes displaying list of Rookies, filtering by birth year, redirection based on selected options and download Rookies excel file.
+This project is an ASP.NET Core MVC application that manages a list of NashTech Rookies. It includes CRUD operations, filtering by birth year, genders and download Rookies excel file.
 
 ---
 
