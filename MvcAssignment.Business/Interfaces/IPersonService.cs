@@ -1,23 +1,31 @@
-﻿using MvcAssignment.Data.Models;
+﻿using MvcAssignment.Shared.DTOs;
 
 namespace MvcAssignment.Business.Interfaces
 {
     public interface IPersonService
     {
-        public List<Person> GetAll();
+        public List<PersonDTO> GetAllMembers();
 
-        public List<Person> GetMaleMembers();
+        public List<PersonDTO> GetMaleMembers();
 
-        public Person GetOldestMember();
+        public PersonDTO GetOldestMember();
 
         public List<string> GetFullnames();
 
-        public List<Person> GetMembersByBirthYear(int year);
+        public List<PersonDTO> GetMembersByBirthYear(int year);
 
-        public List<Person> GetMembersByBirthYearGreater(int year);
+        public List<PersonDTO> GetMembersByBirthYearGreater(int year);
 
-        public List<Person> GetMembersByBirthYearLess(int year);
+        public List<PersonDTO> GetMembersByBirthYearLess(int year);
 
         public MemoryStream WriteMembersToExcel();
+
+        public PersonDTO CreateNewMember(PersonToCreateDTO person);
+
+        public PersonDTO EditMember(PersonDTO member);
+
+        public PersonDTO GetMemberById(int id);
+
+        public void DeleteMember(int id);
     }
 }

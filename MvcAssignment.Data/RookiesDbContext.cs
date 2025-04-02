@@ -1,5 +1,5 @@
 ﻿using MvcAssignment.Data.Models;
-using MvcAssignment.Data.Enums;
+using MvcAssignment.Shared.Enums;
 using MvcAssignment.Data.Interfaces;
 
 namespace MvcAssignment.Data
@@ -17,6 +17,7 @@ namespace MvcAssignment.Data
                 PhoneNumber = "0928492950",
                 BirthPlace = "Hà Nội",
                 IsGraduated = false,
+                CreatedDate = DateTime.Parse("2025-04-01")
             },
             new Person
             {
@@ -28,6 +29,7 @@ namespace MvcAssignment.Data
                 PhoneNumber = "0928492123",
                 BirthPlace = "Hà Nội",
                 IsGraduated = false,
+                CreatedDate= DateTime.Parse("2025-04-01")
             },
             new Person
             {
@@ -39,6 +41,7 @@ namespace MvcAssignment.Data
                 PhoneNumber = "0921292950",
                 BirthPlace = "Bắc Ninh",
                 IsGraduated = false,
+                CreatedDate= DateTime.Parse("2025-04-01")
             },
             new Person
             {
@@ -50,6 +53,7 @@ namespace MvcAssignment.Data
                 PhoneNumber = "0921212950",
                 BirthPlace = "Nam Định",
                 IsGraduated = true,
+                CreatedDate= DateTime.Parse("2025-04-01")
             },
             new Person
             {
@@ -61,8 +65,9 @@ namespace MvcAssignment.Data
                 PhoneNumber = "0921222950",
                 BirthPlace = "Thái Bình",
                 IsGraduated = true,
+                CreatedDate= DateTime.Parse("2025-04-01")
             }
-            ];
+        ];
 
         public List<Person> Persons => _persons;
     }

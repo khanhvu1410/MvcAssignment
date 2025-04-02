@@ -1,9 +1,108 @@
-﻿@model IEnumerable<MvcAssignment.Data.Models.Person>
+﻿@using MvcAssignment.Web.Enums
+@model IEnumerable<MvcAssignment.Shared.DTOs.PersonDTO>
 
 @{
-    ViewData["Title"] = "All Rookies";
+    ViewData["Title"] = "Rookies List";
+    int year = 2000;
 }
 
-<h1>All rookies</h1>
+<style>
+    .option-box {
+        display: flex;
+    }
 
-@await Html.PartialAsync("_RookiesPartial", Model)
+        .option-box p {
+            margin-right: 10px;
+        }
+</style>
+
+<h1>Rookies list</h1>
+
+<div class="option-box">
+    <p>
+        <a asp-action="CreateNewRookie">Create New</a>
+    </p>
+    <p>
+        <a asp-action="GetMaleRookies">Male rookies</a>
+    </p>
+    <p>
+        <a asp-action="GetRookiesByBirthYear" asp-route-option="@Option.Equal" , asp-route-year="@year">Birth year 2000</a>
+    </p>
+    <p>
+        <a asp-action="GetRookiesByBirthYearGreater" asp-route-option="@Option.Equal" , asp-route-year="@year">Birth year greater than 2000</a>
+    </p>
+    <p>
+        <a asp-action="GetRookiesByBirthYearLess" asp-route-option="@Option.Equal" , asp-route-year="@year">Birth year less than 2000</a>
+    </p>
+    <p>
+        <a asp-action="DownloadRookiesExcel" asp-controller="Rookies">Download Excel</a>
+    </p>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthPlace)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsGraduated)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthPlace)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsGraduated)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditRookie", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "GetRookieDetails", new { id = item.Id })
+                    @* @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) *@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

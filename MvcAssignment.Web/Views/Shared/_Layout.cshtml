@@ -1,10 +1,4 @@
-﻿@using MvcAssignment.Web.Enums
-
-@{
-    int year = 2000;
-}
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -32,28 +26,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="Index">Get all rookies</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="Index">Rookies list</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="GetMaleRookies">Get male rookies</a>
-                        </li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="GetOldestRookie">The oldest rookie</a>
+                        </li> 
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="GetOldestRooky">Get oldest rooky</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="GetFullnames">Get fullnames</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="RedirectBasedOnOption" asp-route-option="@Option.Equal", asp-route-year="@year">Birth year 2000</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="RedirectBasedOnOption" asp-route-option="@Option.Greater" , asp-route-year="@year">Birth year greater than 2000</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="RedirectBasedOnOption" asp-route-option="@Option.Less" , asp-route-year="@year">Birth year less than 2000</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="DownloadRookiesExcel">Download Excel</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Rookies" asp-action="GetFullnames">Fullnames list</a>
                         </li>
                     </ul>
                 </div>
