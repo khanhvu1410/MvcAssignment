@@ -141,6 +141,7 @@ namespace MvcAssignment.Business.Services
                 DateOfBirth = personDto.DateOfBirth,
                 PhoneNumber = personDto.PhoneNumber,
                 BirthPlace = personDto.BirthPlace,
+                IsGraduated = personDto.IsGraduated,
                 CreatedDate = DateTime.Now,
             };
 
@@ -162,6 +163,7 @@ namespace MvcAssignment.Business.Services
                 FirstName = personDto.FirstName,
                 LastName = personDto.LastName,
                 Gender = personDto.Gender,
+                DateOfBirth= personDto.DateOfBirth,
                 PhoneNumber = personDto.PhoneNumber,
                 BirthPlace = personDto.BirthPlace,
                 IsGraduated = personDto.IsGraduated,
