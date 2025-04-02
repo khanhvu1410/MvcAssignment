@@ -26,13 +26,13 @@
         <a asp-action="GetMaleRookies">Male rookies</a>
     </p>
     <p>
-        <a asp-action="GetRookiesByBirthYear" asp-route-option="@Option.Equal" , asp-route-year="@year">Birth year 2000</a>
+        <a asp-action="RedirectBasedOnOption" asp-route-option="@Option.Equal" , asp-route-year="@year">Birth year 2000</a>
     </p>
     <p>
-        <a asp-action="GetRookiesByBirthYearGreater" asp-route-option="@Option.Equal" , asp-route-year="@year">Birth year greater than 2000</a>
+        <a asp-action="RedirectBasedOnOption" asp-route-option="@Option.Greater" , asp-route-year="@year">Birth year greater than 2000</a>
     </p>
     <p>
-        <a asp-action="GetRookiesByBirthYearLess" asp-route-option="@Option.Equal" , asp-route-year="@year">Birth year less than 2000</a>
+        <a asp-action="RedirectBasedOnOption" asp-route-option="@Option.Less" , asp-route-year="@year">Birth year less than 2000</a>
     </p>
     <p>
         <a asp-action="DownloadRookiesExcel" asp-controller="Rookies">Download Excel</a>
