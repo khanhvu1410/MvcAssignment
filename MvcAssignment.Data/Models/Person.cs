@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using MvcAssignment.Data.Enums;
+﻿using MvcAssignment.Shared.DTOs;
+using MvcAssignment.Shared.Enums;
 
 namespace MvcAssignment.Data.Models
 {
@@ -7,24 +7,39 @@ namespace MvcAssignment.Data.Models
     {
         public int Id {  get; set; }
 
-        [Required]
-        public string? FirstName {  get; set; }
+        public required string FirstName {  get; set; }
 
-        [Required]
-        public string? LastName { get; set; }
+        public required string LastName { get; set; }
 
-        [Required]
         public Gender Gender { get; set; }
 
-        [Required]
         public DateTime DateOfBirth { get; set; }
 
-        public string? PhoneNumber { get; set; }
+        public required string PhoneNumber { get; set; }
 
-        [Required]
-        public string? BirthPlace { get; set; }    
+        public required string BirthPlace { get; set; }    
 
-        [Required]
         public bool IsGraduated { get; set; }
+
+        public DateTime CreatedDate {  get; set; }
+
+        public DateTime UpdatedDate { get; set; }
+
+        public DateTime DeletedDate {  get; set; }
+
+        public PersonDTO ToPersonDTO()
+        {
+            return new PersonDTO
+            {
+                Id = Id,
+                FirstName = FirstName,
+                LastName = LastName,
+                Gender = Gender,
+                DateOfBirth = DateOfBirth,
+                PhoneNumber = PhoneNumber,
+                BirthPlace = BirthPlace,
+                IsGraduated = IsGraduated,
+            };
+        }
     }
 }

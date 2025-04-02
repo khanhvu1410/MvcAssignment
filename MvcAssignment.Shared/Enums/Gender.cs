@@ -1,4 +1,4 @@
-﻿namespace MvcAssignment.Data.Enums
+﻿namespace MvcAssignment.Shared.Enums
 {
     public enum Gender
     {

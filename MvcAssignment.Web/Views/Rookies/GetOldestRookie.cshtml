@@ -1,0 +1,9 @@
+﻿@model MvcAssignment.Shared.DTOs.PersonDTO
+
+@{
+    ViewData["Title"] = "Oldest Rooky";
+}
+
+<h1>The oldest rookie</h1>
+
+@await Html.PartialAsync("_RookieDetailsPartial", Model)

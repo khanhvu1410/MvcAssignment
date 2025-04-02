@@ -1,0 +1,14 @@
+﻿@model MvcAssignment.Shared.DTOs.PersonDTO
+
+@{
+    ViewData["Title"] = "Rookie Details";
+}
+
+<h1>Rookie Details</h1>
+
+@await Html.PartialAsync("_RookieDetailsPartial", Model)
+
+<div>
+    @Html.ActionLink("Delete", "DeleteRookie", new {  id = Model.Id, name = Model.FirstName })
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using MvcAssignment.Business.Interfaces;
+using MvcAssignment.Shared.DTOs;
+using MvcAssignment.Shared.Enums;
 using MvcAssignment.Web.Enums;
 
 namespace MvcAssignment.Web.Controllers
@@ -16,22 +19,48 @@ namespace MvcAssignment.Web.Controllers
         [Route("NashTech/[controller]/[action]")]
         public IActionResult Index()
         {
-            return SafeExecute(_personService.GetAll());
+            var rookies = _personService.GetAllMembers();
+            return View(rookies);
         }
 
         public IActionResult GetMaleRookies()
         {
-            return SafeExecute(_personService.GetMaleMembers());
+            var rookies = _personService.GetMaleMembers();
+            return View("Index", rookies);
         }
 
-        public IActionResult GetOldestRooky()
+        public IActionResult GetOldestRookie()
         {
-            return SafeExecute(_personService.GetOldestMember());
+            try
+            {
+                var rookies = _personService.GetOldestMember();
+                return View(rookies);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return View("RookiesNotFound", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return View("RookiesError", ex.Message);
+            }
         }
 
         public IActionResult GetFullnames()
         {
-            return SafeExecute(_personService.GetFullnames());
+            try
+            {
+                var fullnames = _personService.GetFullnames();
+                return View(fullnames);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return View("RookiesNotFound", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return View("RookiesError", ex.Message);
+            }
         }
 
         public IActionResult RedirectBasedOnOption(Option option, int year)
@@ -49,17 +78,20 @@ namespace MvcAssignment.Web.Controllers
 
         public IActionResult GetRookiesByBirthYear(int year)
         {
-            return SafeExecute(_personService.GetMembersByBirthYear(year));
+            var rookies = _personService.GetMembersByBirthYear(year);
+            return View("Index", rookies);
         }
 
         public IActionResult GetRookiesByBirthYearGreater(int year)
         {
-            return SafeExecute(_personService.GetMembersByBirthYearGreater(year));
+            var rookies = _personService.GetMembersByBirthYearGreater(year);
+            return View("Index", rookies);
         }
 
         public IActionResult GetRookiesByBirthYearLess(int year)
         {
-            return SafeExecute(_personService.GetMembersByBirthYearLess(year));
+            var rookies = _personService.GetMembersByBirthYearLess(year);
+            return View("Index", rookies);
         }
 
         public IActionResult DownloadRookiesExcel()
@@ -71,7 +103,7 @@ namespace MvcAssignment.Web.Controllers
             }
             catch (KeyNotFoundException ex)
             {
-                return View("NotFound", ex.Message);
+                return View("RookiesNotFound", ex.Message);
             }
             catch (Exception ex)
             {
@@ -79,15 +111,84 @@ namespace MvcAssignment.Web.Controllers
             }
         }
 
-        private ViewResult SafeExecute<T>(T result)
+        public IActionResult CreateNewRookie()
+        {
+            ViewBag.GenderList = new SelectList(Enum.GetValues(typeof(Gender)));
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateNewRookie(PersonToCreateDTO person)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.GenderList = new SelectList(Enum.GetValues(typeof(Gender)));
+                return View();
+            }
+
+            _personService.CreateNewMember(person);
+            return RedirectToAction("Index");    
+        }
+
+        public IActionResult EditRookie(int id)
+        {
+            ViewBag.GenderList = new SelectList(Enum.GetValues(typeof(Gender)));
+            var rookie = _personService.GetMemberById(id);
+            return View(rookie);
+        }
+
+        [HttpPost]
+        public IActionResult EditRookie(PersonDTO person)
         {
             try
             {
-                return View(result);
+                if (!ModelState.IsValid)
+                {
+                    ViewBag.GenderList = new SelectList(Enum.GetValues(typeof(Gender)));
+                    return View(person);
+                }
+
+                _personService.EditMember(person);              
+                return RedirectToAction("Index");
             }
             catch (KeyNotFoundException ex)
             {
-                return View("NotFound", ex.Message);
+                return View("RookiesNotFound", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return View("RookiesError", ex.Message);
+            }
+        }
+
+        public IActionResult GetRookieDetails(int id)
+        {
+            try
+            {
+                var rookie = _personService.GetMemberById(id);
+                return View(rookie);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return View("RookiesNotFound", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return View("RookiesError", ex.Message);
+            }
+        }
+
+        public IActionResult DeleteRookie(int id, string name)
+        {
+            try
+            {
+                _personService.DeleteMember(id);
+                var message = $"Person {name} was removed from the list successfully!";
+                return View("RookiesSuccess", message);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return View("RookiesNotFound", ex.Message);
             }
             catch (Exception ex)
             {
