@@ -1,11 +1,11 @@
 # MVC .Net Core Assignment - Khanh Vu
 
-## 📌 Project Overview  
+## Project Overview  
 This project is an ASP.NET Core MVC application that manages a list of NashTech Rookies. It includes displaying list of Rookies, filtering by birth year, redirection based on selected options and download Rookies excel file.
 
 ---
 
-## 🚀 How to Run the MVC Application
+## How to Run the MVC Application
 
 ### Step 1: Clone the repository  
 Open a terminal or command prompt and run the following command:
