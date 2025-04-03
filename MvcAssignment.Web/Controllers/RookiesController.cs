@@ -118,6 +118,7 @@ namespace MvcAssignment.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult CreateNewRookie(PersonToCreateDTO person)
         {
             if (!ModelState.IsValid)
@@ -138,6 +139,7 @@ namespace MvcAssignment.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult EditRookie(PersonDTO person)
         {
             try
